@@ -3,40 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RIFT TRADERS KE - KQBinary</title>
+<title>RIFT TRADERS KE - RT</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
-body{background:#0f0f14;color:#fff;padding-bottom:80px}
-.header{display:flex;justify-content:space-between;padding:10px;background:#16161e;align-items:center}
-.logo{font-weight:900;display:flex;gap:8px;align-items:center}
-.logo span{background:#ff6a2d;color:#000;width:34px;height:26px;display:flex;align-items:center;justify-content:center;border-radius:8px}
-.bal{background:#23232f;padding:6px 12px;border-radius:20px;font-size:13px}
-.dep{background:#ff6a2d;color:#fff;padding:7px 14px;border-radius:8px;border:none;font-weight:bold}
-.tabs{display:flex;gap:8px;padding:10px}
-.tab{padding:8px 16px;border-radius:20px;background:#1e1e2a;color:#888;border:none}
-.tab.active{background:#2a1a15;color:#ff6a2d;border:1px solid #ff6a2d}
-.chartBox{background:#16161e;margin:0 10px;border-radius:12px;padding:10px}
-#chart{width:100%;height:260px;background:#0f0f14;margin-top:8px}
-.evenodd{background:#16161e;margin:10px;border-radius:12px;padding:10px}
-.grid{display:grid;grid-template-columns:repeat(10,1fr);gap:4px}
-.bar{height:30px;background:#2a2a35;border-radius:4px}
-.bar.hot{background:#ff6a2d}
-.nums{display:grid;grid-template-columns:repeat(10,1fr);gap:4px;margin-top:6px}
-.num{background:#1e1e2a;padding:6px 0;text-align:center;border-radius:6px;font-size:13px}
-.num.active{background:#ff6a2d;color:#fff}
-.stakeBox{background:#16161e;margin:10px;border-radius:12px;padding:12px;text-align:center}
-.qs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:8px}
-.q{background:#1e1e2a;padding:8px;border-radius:8px;font-size:12px}
-.q.active{border:1px solid #ff6a2d;color:#ff6a2d}
+body{background:#050a14;color:#fff;padding-bottom:80px}
+.header{display:flex;justify-content:space-between;padding:12px;background:#0a1222;align-items:center;border-bottom:1px solid #123}
+.logo{font-weight:900;display:flex;gap:8px;align-items:center;font-size:18px}
+.logo span{background:linear-gradient(135deg,#00b4ff,#0066ff);color:#fff;width:36px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:8px;box-shadow:0 0 10px #00b4ff66}
+.bal{background:#111c33;padding:6px 14px;border-radius:20px;border:1px solid #1e3a5f;color:#8ab4ff}
+.dep{background:linear-gradient(135deg,#00b4ff,#0066ff);color:#fff;padding:8px 16px;border-radius:8px;border:none;font-weight:bold;box-shadow:0 0 15px #00b4ff44}
+.tabs{display:flex;gap:8px;padding:12px}
+.tab{padding:9px 18px;border-radius:20px;background:#0f1a2e;color:#6b7fa3;border:1px solid #1a2a4a}
+.tab.active{background:#102040;color:#00b4ff;border:1px solid #00b4ff;box-shadow:0 0 10px #00b4ff33}
+.box{background:#0a1222;margin:10px;border-radius:14px;padding:12px;border:1px solid #1a2a4a}
+#chart{width:100%;height:260px;background:#050a14;margin-top:10px;border-radius:10px;border:1px solid #102040}
+.grid{display:grid;grid-template-columns:repeat(10,1fr);gap:5px}
+.bar{height:28px;background:#111e36;border-radius:5px;border:1px solid #1a2a4a}
+.bar.hot{background:#00b4ff;box-shadow:0 0 8px #00b4ff}
+.num{background:#0f1a2e;padding:7px 0;text-align:center;border-radius:7px;font-size:13px;color:#8ab4ff;border:1px solid #1a2a4a}
+.num.active{background:linear-gradient(135deg,#00b4ff,#0066ff);color:#fff;box-shadow:0 0 12px #00b4ff66}
+.stake{text-align:center}
+.qs{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:10px}
+.q{background:#0f1a2e;padding:9px;border-radius:9px;border:1px solid #1a2a4a;color:#8ab4ff}
+.q.active{border:1px solid #00b4ff;color:#00b4ff;background:#102040;box-shadow:0 0 8px #00b4ff33}
 .act{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px}
-.btn{padding:14px;border-radius:12px;background:#1e1e2a;border:1px solid #ff6a2d;text-align:left}
-.bottom{position:fixed;bottom:0;left:0;right:0;background:#16161e;display:flex;justify-content:space-around;padding:10px;border-top:1px solid #222}
+.btn{padding:14px;border-radius:12px;background:#0a1222;border:1px solid #1e3a5f}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:#080e1e;display:flex;justify-content:space-around;padding:12px;border-top:1px solid #1a2a4a}
 </style>
 </head>
 <body>
 <div class="header">
-<div class="logo"><span>KQ</span>RiftTraders</div>
-<div class="bal">R $0.00</div>
+<div class="logo"><span>RT</span>RiftTraders</div>
+<div class="bal">$0.00</div>
 <button class="dep" onclick="location.href='https://t.deriv.link?t=ZK9KPMJA37HC'">Deposit</button>
 </div>
 <div class="tabs">
@@ -44,32 +42,27 @@ body{background:#0f0f14;color:#fff;padding-bottom:80px}
 <button class="tab active">Even/Odd</button>
 <button class="tab">Over/Under</button>
 </div>
-<div class="chartBox">
-<b>Volatility 10 (1s) Index</b> <span id="lp" style="float:right;background:#000;border:1px solid #ff6a2d;padding:3px 8px;border-radius:6px">9451.08</span>
+<div class="box">
+<b style="color:#c2d8ff">Volatility 10 (1s) Index</b> <span id="lp" style="float:right;background:#050a14;border:1px solid #00b4ff;padding:4px 10px;border-radius:8px;color:#00b4ff">9451.08</span>
 <canvas id="chart"></canvas>
 </div>
-<div class="evenodd">
-<div style="font-size:11px;color:#888;display:flex;justify-content:space-between"><span>EVEN / ODD</span><span>HOT 4 COLD 9 LAST 8</span></div>
-<div class="grid" id="bars"></div>
-<div class="nums" id="nums"></div>
+<div class="box">
+<div style="font-size:11px;color:#5a7ab0;display:flex;justify-content:space-between"><span>EVEN / ODD</span><span>HOT 4 COLD 9 LAST 8</span></div>
+<div class="grid" id="bars" style="margin-top:8px"></div>
+<div class="grid" id="nums" style="margin-top:7px"></div>
 </div>
-<div class="stakeBox">
-STAKE<br><b style="font-size:22px">$ <span id="st">10</span></b>
+<div class="box stake">
+<span style="color:#5a7ab0;font-size:12px">STAKE</span><br><b style="font-size:24px;color:#fff">$ <span id="st">10</span></b>
 <div class="qs"><div class="q">$1</div><div class="q">$5</div><div class="q active">$10</div><div class="q">$25</div></div>
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px;font-size:11px">
-<div style="background:#1e1e2a;padding:8px;border-radius:8px">TARGET<br>$200</div>
-<div style="background:#1e1e2a;padding:8px;border-radius:8px">STOP LOSS<br>$999</div>
-<div style="background:#1e1e2a;padding:8px;border-radius:8px">MULT x2</div>
-</div>
 </div>
 <div class="act">
-<a href="https://t.deriv.link?t=ZK9KPMJA37HC" style="text-decoration:none;color:#fff"><div class="btn"><b style="color:#ff6a2d">Even</b><span style="float:right">$19.52</span><br><span style="font-size:10px;color:#888">95.20% Payout</span></div></a>
-<a href="https://t.deriv.link?t=ZK9KPMJA37HC" style="text-decoration:none;color:#fff"><div class="btn"><b style="color:#ff6a2d">Odd</b><span style="float:right">$19.52</span><br><span style="font-size:10px;color:#888">95.20% Payout</span></div></a>
+<a href="https://t.deriv.link?t=ZK9KPMJA37HC" style="text-decoration:none;color:#fff"><div class="btn"><b style="color:#00b4ff">Even</b><span style="float:right">$19.52</span><br><span style="font-size:10px;color:#5a7ab0">95.20% Payout</span></div></a>
+<a href="https://t.deriv.link?t=ZK9KPMJA37HC" style="text-decoration:none;color:#fff"><div class="btn"><b style="color:#00b4ff">Odd</b><span style="float:right">$19.52</span><br><span style="font-size:10px;color:#5a7ab0">95.20% Payout</span></div></a>
 </div>
 <div class="bottom">
-<div onclick="location.href='https://wa.me/254717918083'">💬<br>Live Chat</div>
-<div style="color:#ff6a2d">✨<br>AI</div>
-<div>🕒<br>Positions</div>
+<div onclick="location.href='https://wa.me/254717918083'" style="color:#8ab4ff">💬<br>Live Chat</div>
+<div style="color:#00b4ff">✨<br>AI</div>
+<div style="color:#5a7ab0">🕒<br>Positions</div>
 </div>
 <script>
 let p=9451.08,d=[];
@@ -78,9 +71,9 @@ let c=document.getElementById('chart'),x=c.getContext('2d');
 function dr(){
 c.width=c.offsetWidth*2;c.height=c.offsetHeight*2;
 x.clearRect(0,0,c.width,c.height);
-x.strokeStyle='#fff';x.lineWidth=2;x.beginPath();
+x.strokeStyle='#00b4ff';x.shadowColor='#00b4ff';x.shadowBlur=10;x.lineWidth=2;x.beginPath();
 d.forEach((v,i)=>{let X=i/d.length*c.width,Y=c.height-(v-9448)*50;if(i==0)x.moveTo(X,Y);else x.lineTo(X,Y)});
-x.stroke();
+x.stroke();x.shadowBlur=0;
 p+=(Math.random()-0.5)*0.6;d.shift();d.push(p);
 document.getElementById('lp').innerText=p.toFixed(2);
 setTimeout(dr,100);
@@ -89,4 +82,4 @@ let b=document.getElementById('bars'),n=document.getElementById('nums');
 for(let i=0;i<10;i++){b.innerHTML+=`<div class="bar ${i==4?'hot':''}"></div>`;n.innerHTML+=`<div class="num ${i==8?'active':''}">${i}</div>`;}
 </script>
 </body>
-                              </html>
+</html>
