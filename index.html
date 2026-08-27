@@ -2,141 +2,71 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RIFT TRADERS KE - RT REAL & DEMO</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RT - RiftTraders</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
-body{background:#050a14;color:#fff;padding-bottom:85px}
-.header{display:flex;justify-content:space-between;padding:12px;background:#0a1222;align-items:center;border-bottom:1px solid #123;flex-wrap:wrap;gap:8px}
-.logo{font-weight:900;display:flex;gap:8px;align-items:center}
-.logo span{background:linear-gradient(135deg,#00b4ff,#0066ff);color:#fff;width:36px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:8px}
-.acct{display:flex;background:#111c33;border-radius:20px;border:1px solid #1e3a5f;overflow:hidden}
-.acct button{padding:6px 14px;border:none;font-size:12px;cursor:pointer;background:transparent;color:#6b7fa3;font-weight:bold}
-.acct button.active{background:#00b4ff;color:#fff}
-.acct button.active.real{background:#00ff88;color:#000}
-.bal{background:#111c33;padding:6px 14px;border-radius:20px;border:1px solid #1e3a5f;color:#8ab4ff;font-size:13px;min-width:90px;text-align:center}
-.bal.real{border-color:#00ff88;color:#00ff88}
-.dep{background:linear-gradient(135deg,#00b4ff,#0066ff);color:#fff;padding:8px 16px;border-radius:8px;border:none;font-weight:bold;cursor:pointer}
-.tabs{display:flex;gap:8px;padding:12px}
-.tab{padding:9px 18px;border-radius:20px;background:#0f1a2e;color:#6b7fa3;border:1px solid #1a2a4a}
-.tab.active{background:#102040;color:#00b4ff;border:1px solid #00b4ff}
-.box{background:#0a1222;margin:10px;border-radius:14px;padding:12px;border:1px solid #1a2a4a}
-#chart{width:100%;height:280px;background:#050a14;margin-top:10px;border-radius:10px;border:1px solid #102040}
-.grid{display:grid;grid-template-columns:repeat(10,1fr);gap:5px}
-.bar{height:32px;background:#111e36;border-radius:5px;border:1px solid #1a2a4a}
-.bar.hot{background:#00b4ff;box-shadow:0 0 10px #00b4ff}
-.num{background:#0f1a2e;padding:7px 0;text-align:center;border-radius:7px;font-size:13px;color:#8ab4ff;border:1px solid #1a2a4a}
-.num.active{background:linear-gradient(135deg,#00b4ff,#0066ff);color:#fff}
-.aiBox{background:linear-gradient(135deg,#0a1222,#102040);border:1px solid #00b4ff55;border-radius:14px;padding:12px;margin:10px;display:flex;justify-content:space-between;align-items:center}
-.qs{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:10px}
-.q{background:#0f1a2e;padding:9px;border-radius:9px;border:1px solid #1a2a4a;color:#8ab4ff;text-align:center;cursor:pointer}
-.q.active{border:1px solid #00b4ff;color:#00b4ff;background:#102040}
-.act{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px}
-.btn{padding:14px;border-radius:12px;background:#0a1222;border:1px solid #1e3a5f;cursor:pointer}
-.bottom{position:fixed;bottom:0;left:0;right:0;background:#080e1e;display:flex;justify-content:space-around;padding:12px;border-top:1px solid #1a2a4a}
-.dot{width:8px;height:8px;border-radius:50%;display:inline-block;animation:blink 1s infinite}
-.dot.real{background:#00ff88}.dot.demo{background:#00b4ff}
-@keyframes blink{50%{opacity:0}}
+body{background:#050a14;color:#fff;padding-bottom:80px}
+.h{display:flex;justify-content:space-between;padding:10px;background:#0a1222;align-items:center;flex-wrap:wrap;gap:6px}
+.logo{font-weight:900;display:flex;gap:6px;align-items:center}
+.logo span{background:#00b4ff;color:#fff;width:32px;height:26px;display:flex;align-items:center;justify-content:center;border-radius:6px}
+.a{display:flex;background:#111c33;border-radius:18px;border:1px solid #1e3a5f}
+.a button{padding:5px 12px;border:none;font-size:12px;background:transparent;color:#888}
+.a button.on{background:#00b4ff;color:#fff;border-radius:18px}
+.a button.on.r{background:#00ff88;color:#000}
+.bal{background:#111c33;padding:5px 12px;border-radius:18px;border:1px solid #1e3a5f;color:#8ab4ff;font-size:12px}
+.dep{background:#00b4ff;color:#fff;padding:7px 14px;border-radius:8px;border:none;font-weight:bold}
+.box{background:#0a1222;margin:8px;border-radius:12px;padding:10px;border:1px solid #1a2a4a}
+#chart{width:100%;height:220px;background:#050a14;border-radius:8px;border:1px solid #102040}
+.grid{display:grid;grid-template-columns:repeat(10,1fr);gap:4px;margin-top:6px}
+.bar{height:30px;background:#111e36;border-radius:4px}
+.bar.hot{background:#00b4ff}
+.num{background:#0f1a2e;padding:6px 0;text-align:center;border-radius:6px;font-size:12px;color:#8ab4ff}
+.num.on{background:#00b4ff;color:#fff}
+.qs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:8px}
+.q{background:#0f1a2e;padding:8px;border-radius:8px;border:1px solid #1a2a4a;color:#8ab4ff;text-align:center}
+.q.on{border-color:#00b4ff;color:#00b4ff}
+.btn{padding:12px;border-radius:10px;background:#0a1222;border:1px solid #1e3a5f;margin:5px}
 </style>
 </head>
 <body>
-<div class="header">
+<div class="h">
 <div class="logo"><span>RT</span>RiftTraders</div>
-<div class="acct">
-<button id="realBtn" class="real" onclick="setAcct('real')">REAL</button>
-<button id="demoBtn" class="active" onclick="setAcct('demo')">DEMO</button>
+<div class="a"><button id="rb" onclick="setA('real')">REAL</button><button id="db" class="on" onclick="setA('demo')">DEMO</button></div>
+<div class="bal">$<span id="bal">10000.00</span></div>
+<button class="dep" onclick="dep()">Deposit</button>
 </div>
-<div class="bal" id="balBox"><span class="dot demo" id="balDot"></span> $<span id="bal">10000.00</span></div>
-<button class="dep" id="depBtn" onclick="window.open('https://t.deriv.link?t=ZK9KPMJA37HC','_blank')">Deposit</button>
-</div>
-
-<div class="tabs">
-<button class="tab">Matches/Differs</button>
-<button class="tab active">Even/Odd</button>
-<button class="tab">Over/Under</button>
-</div>
-
 <div class="box">
-<div style="display:flex;justify-content:space-between">
-<b style="color:#c2d8ff">Volatility 10 (1s) Index</b>
-<span id="lp" style="background:#050a14;border:1px solid #00b4ff;padding:4px 10px;border-radius:8px;color:#00b4ff;font-weight:bold">9451.08</span>
-</div>
+<b>Volatility 10 (1s) Index</b> <span id="pr" style="float:right;color:#00b4ff;border:1px solid #00b4ff;padding:3px 8px;border-radius:6px">9451.08</span>
 <canvas id="chart"></canvas>
-<div style="font-size:11px;color:#5a7ab0;margin-top:6px;display:flex;justify-content:space-between">
-<span id="feed">REAL DERIV FEED • 1 SECOND</span>
-<span id="last">Last: -</span>
+<div style="font-size:10px;color:#5a7ab0;margin-top:4px" id="feed">LIVE • DEMO</div>
 </div>
+<div class="box" style="display:flex;justify-content:space-between">
+<div><div style="font-size:10px;color:#5a7ab0">AI • <span id="al">DEMO</span></div><b id="ai" style="color:#00b4ff;font-size:18px">EVEN</b><div style="font-size:10px" id="ac">55%</div></div>
+<div style="text-align:right"><div>🤖</div><div id="ap" style="background:#102040;padding:2px 8px;border-radius:10px;border:1px solid #00b4ff;font-size:11px">55%</div></div>
 </div>
-
-<div class="aiBox">
-<div>
-<div style="font-size:11px;color:#5a7ab0">AI PREDICTION • <span id="acctLabel">DEMO ACCOUNT</span></div>
-<b id="aiPred" style="font-size:18px;color:#00b4ff">ANALYZING...</b>
-<div style="font-size:11px;color:#8ab4ff" id="aiConf">Starting...</div>
-</div>
-<div style="text-align:right">
-<div style="font-size:20px">🤖</div>
-<div style="font-size:11px;background:#102040;padding:3px 8px;border-radius:10px;border:1px solid #00b4ff" id="aiPct">0%</div>
-</div>
-</div>
-
 <div class="box">
-<div style="font-size:11px;color:#5a7ab0;display:flex;justify-content:space-between"><span>EVEN / ODD - REAL</span><span>HOT <span id="hot">-</span> COLD <span id="cold">-</span> LAST <span id="lastDigit">-</span></span></div>
-<div class="grid" id="bars" style="margin-top:8px"></div>
-<div class="grid" id="nums" style="margin-top:7px"></div>
+<div style="font-size:10px;color:#5a7ab0;display:flex;justify-content:space-between">EVEN/ODD REAL <span>HOT <span id="hot">-</span> COLD <span id="cold">-</span> LAST <span id="last">-</span></span></div>
+<div class="grid" id="bars"></div>
+<div class="grid" id="nums"></div>
 </div>
-
-<div class="box" style="text-align:center">
-<span style="color:#5a7ab0;font-size:12px">STAKE • <span id="stakeAcct">DEMO</span></span><br>
-<b style="font-size:24px">$ <span id="st">10</span></b>
-<div class="qs"><div class="q" data-v="1">$1</div><div class="q" data-v="5">$5</div><div class="q active" data-v="10">$10</div><div class="q" data-v="25">$25</div></div>
+<div class="box" style="text-align:center">STAKE • <span id="sa">DEMO</span><br><b style="font-size:22px">$<span id="st">10</span></b><div class="qs"><div class="q" onclick="setS(1,this)">$1</div><div class="q" onclick="setS(5,this)">$5</div><div class="q on" onclick="setS(10,this)">$10</div><div class="q" onclick="setS(25,this)">$25</div></div></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;padding:8px;gap:8px">
+<div class="btn" onclick="tr('even')"><b style="color:#00b4ff">Even</b><span style="float:right" id="ep">$19.52</span><br><span style="font-size:9px;color:#5a7ab0" id="evp">50%</span></div>
+<div class="btn" onclick="tr('odd')"><b style="color:#00b4ff">Odd</b><span style="float:right" id="op">$19.52</span><br><span style="font-size:9px;color:#5a7ab0" id="odp">50%</span></div>
 </div>
-
-<div class="act">
-<div class="btn" onclick="trade('even')"><b style="color:#00b4ff">Even</b><span style="float:right" id="evenPay">$19.52</span><br><span style="font-size:10px;color:#5a7ab0">95.20% • <span id="evenPct">50%</span></span></div>
-<div class="btn" onclick="trade('odd')"><b style="color:#00b4ff">Odd</b><span style="float:right" id="oddPay">$19.52</span><br><span style="font-size:10px;color:#5a7ab0">95.20% • <span id="oddPct">50%</span></span></div>
-</div>
-
-<div class="bottom">
-<div style="color:#8ab4ff;text-align:center;font-size:12px">💬<br>Live Chat</div>
-<div style="color:#00b4ff;text-align:center;font-size:12px">✨<br><span id="bottomAcct">DEMO</span></div>
-<div style="color:#5a7ab0;text-align:center;font-size:12px">🕒<br>Positions</div>
-</div>
-
 <script>
-let ticks=[],digits=[],lastPrice=9451.08,stake=10,acct='demo';
-let realBal=0.00,demoBal=10000.00;
-let c=document.getElementById('chart'),x=c.getContext('2d');
-
-function setAcct(type){
-acct=type;
-document.getElementById('realBtn').classList.remove('active');
-document.getElementById('demoBtn').classList.remove('active');
-document.getElementById(type+'Btn').classList.add('active');
-if(type=='real'){
-document.getElementById('bal').innerText=realBal.toFixed(2);
-document.getElementById('balBox').classList.add('real');
-document.getElementById('balDot').className='dot real';
-document.getElementById('acctLabel').innerText='REAL ACCOUNT';
-document.getElementById('acctLabel').style.color='#00ff88';
-document.getElementById('stakeAcct').innerText='REAL';
-document.getElementById('bottomAcct').innerText='REAL';
-document.getElementById('depBtn').innerText='Deposit';
-document.getElementById('depBtn').style.background='linear-gradient(135deg,#00ff88,#00cc66)';
-}else{
-document.getElementById('bal').innerText=demoBal.toFixed(2);
-document.getElementById('balBox').classList.remove('real');
-document.getElementById('balDot').className='dot demo';
-document.getElementById('acctLabel').innerText='DEMO ACCOUNT';
-document.getElementById('acctLabel').style.color='#00b4ff';
-document.getElementById('stakeAcct').innerText='DEMO';
-document.getElementById('bottomAcct').innerText='DEMO';
-document.getElementById('depBtn').innerText='Top Up $10k';
-document.getElementById('depBtn').style.background='linear-gradient(135deg,#00b4ff,#0066ff)';
-}
-localStorage.setItem('rt_acct',type);
-}
-
-function init(){c.width=c.offsetWidth*2;c.height=c.offsetHeight*2;}
-function draw(){init();if(ticks.length<2)return;x.clearRect(0,0,c.width,c.height);let min=Math.min(...ticks),max=Math.max(...ticks),range=max-min||1;x.strokeStyle=acct=='real'?'#00ff88':'#00b4ff';x.shadowColor=x.strokeStyle;x.shadowBlur=10;x.lineWidth=2.5;x.beginPath();ticks.forEach((v,i)=>{let X=i/(ticks.length-1)*c.width;let Y=c.height-((v-min)/range*c.height*0.8+c.height*0.1);if(i==0)x.moveTo(X,Y);else x.lineTo(X,Y);});x.stroke();x.shadowBlur=0;}
-function update(){if(digits.length<5)return;let cnt={};for(let i=0;i<10;i++)cnt[i]=0;digits.forEach(d=>cnt[d]++);let hot=Object.keys(cnt).reduce((a,b)=>cnt[a]>cnt[b]?a:b);let cold=Object.keys(cnt).reduce((a,b)=>cnt
+let ticks=[],digits=[],price=9451.08,acct='demo',stake=10,demo=10000,real=0;
+let can=document.getElementById('chart'),ctx=can.getContext('2d');
+function setA(t){acct=t;document.getElementById('rb').className=t=='real'?'on r':'';document.getElementById('db').className=t=='demo'?'on':'';document.getElementById('bal').innerText=(t=='real'?real:demo).toFixed(2);document.getElementById('al').innerText=t.toUpperCase();document.getElementById('sa').innerText=t.toUpperCase();document.getElementById('feed').innerText='LIVE • '+t.toUpperCase();}
+function setS(v,e){stake=v;document.getElementById('st').innerText=v;document.querySelectorAll('.q').forEach(q=>q.classList.remove('on'));e.classList.add('on');let p=(v*1.952).toFixed(2);document.getElementById('ep').innerText='$'+p;document.getElementById('op').innerText='$'+p;}
+function draw(){can.width=can.offsetWidth*2;can.height=can.offsetHeight*2;if(ticks.length<2)return;ctx.clearRect(0,0,can.width,can.height);let mn=Math.min(...ticks),mx=Math.max(...ticks),rg=mx-mn||1;ctx.strokeStyle=acct=='real'?'#00ff88':'#00b4ff';ctx.lineWidth=2;ctx.beginPath();ticks.forEach((v,i)=>{let X=i/(ticks.length-1)*can.width;let Y=can.height-((v-mn)/rg*can.height*0.7+can.height*0.15);if(i==0)ctx.moveTo(X,Y);else ctx.lineTo(X,Y);});ctx.stroke();}
+function upd(){if(digits.length<10)return;let c={};for(let i=0;i<10;i++)c[i]=0;digits.forEach(d=>c[d]++);let hot=Object.keys(c).reduce((a,b)=>c[a]>c[b]?a:b),0);let cold=Object.keys(c).reduce((a,b)=>c[a]<c[b]?a:b),0);let last=digits[digits.length-1];document.getElementById('hot').innerText=hot;document.getElementById('cold').innerText=cold;document.getElementById('last').innerText=last;let b=document.getElementById('bars'),n=document.getElementById('nums');b.innerHTML='';n.innerHTML='';let mc=Math.max(...Object.values(c));for(let i=0;i<10;i++){let h=(c[i]/mc*35+8);b.innerHTML+=`<div class="bar ${i==hot?'hot':''}" style="height:${h}px"></div>`;n.innerHTML+=`<div class="num ${i==last?'on':''}">${i}<br><span style="font-size:8px">${c[i]}</span></div>`;}let ev=digits.filter(d=>d%2==0).length,evp=Math.round(ev/digits.length*100),odp=100-evp;document.getElementById('evp').innerText=evp+'%';document.getElementById('odp').innerText=odp+'%';document.getElementById('ai').innerText=evp>odp?'EVEN':'ODD';document.getElementById('ap').innerText=Math.max(evp,odp)+'%';document.getElementById('ac').innerText=Math.max(evp,odp)+'% '+acct;}
+for(let i=0;i<60;i++){ticks.push(price+Math.sin(i*0.3)*2);digits.push(Math.floor(Math.random()*10));}
+draw();upd();
+setInterval(()=>{price+=(Math.random()-0.5)*0.8;document.getElementById('pr').innerText=price.toFixed(2);ticks.push(price);if(ticks.length>80)ticks.shift();let d=Math.floor(Math.random()*10);digits.push(d);if(digits.length>40)digits.shift();draw();upd();},1000);
+function tr(t){let b=acct=='real'?real:demo;if(b<stake){alert('Low '+acct+' balance!');return;}if(acct=='demo'){let w=Math.random()>0.5;if(w){demo+=stake*0.952;alert('DEMO WIN +$'+(stake*0.952).toFixed(2)+'\nNew: $'+demo.toFixed(2));}else{demo-=stake;alert('DEMO LOSS -$'+stake+'\nNew: $'+demo.toFixed(2));}document.getElementById('bal').innerText=demo.toFixed(2);}else{if(confirm('REAL TRADE '+t.toUpperCase()+' $'+stake+'\nGo to Deriv?'))window.open('https://t.deriv.link?t=ZK9KPMJA37HC','_blank');}}
+function dep(){if(acct=='demo'){demo=10000;document.getElementById('bal').innerText='10000.00';alert('Demo reset $10k');}else window.open('https://t.deriv.link?t=ZK9KPMJA37HC','_blank');}
+</script>
+</body>
+</html>
